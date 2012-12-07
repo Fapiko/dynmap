@@ -7,27 +7,27 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.ListIterator;
 
-import net.minecraft.server.BiomeBase;
-import net.minecraft.server.ChunkProviderServer;
-import net.minecraft.server.NBTBase;
-import net.minecraft.server.NBTTagByte;
-import net.minecraft.server.NBTTagByteArray;
-import net.minecraft.server.NBTTagCompound;
-import net.minecraft.server.NBTTagDouble;
-import net.minecraft.server.NBTTagFloat;
-import net.minecraft.server.NBTTagInt;
-import net.minecraft.server.NBTTagIntArray;
-import net.minecraft.server.NBTTagLong;
-import net.minecraft.server.NBTTagShort;
-import net.minecraft.server.NBTTagString;
-import net.minecraft.server.TileEntity;
+import net.minecraft.server.v1_4_5.BiomeBase;
+import net.minecraft.server.v1_4_5.ChunkProviderServer;
+import net.minecraft.server.v1_4_5.NBTBase;
+import net.minecraft.server.v1_4_5.NBTTagByte;
+import net.minecraft.server.v1_4_5.NBTTagByteArray;
+import net.minecraft.server.v1_4_5.NBTTagCompound;
+import net.minecraft.server.v1_4_5.NBTTagDouble;
+import net.minecraft.server.v1_4_5.NBTTagFloat;
+import net.minecraft.server.v1_4_5.NBTTagInt;
+import net.minecraft.server.v1_4_5.NBTTagIntArray;
+import net.minecraft.server.v1_4_5.NBTTagLong;
+import net.minecraft.server.v1_4_5.NBTTagShort;
+import net.minecraft.server.v1_4_5.NBTTagString;
+import net.minecraft.server.v1_4_5.TileEntity;
 
 import org.bukkit.World;
 import org.bukkit.Chunk;
 import org.bukkit.block.Biome;
-import org.bukkit.craftbukkit.CraftChunk;
-import org.bukkit.craftbukkit.CraftChunkSnapshot;
-import org.bukkit.craftbukkit.CraftWorld;
+import org.bukkit.craftbukkit.v1_4_5.CraftChunk;
+import org.bukkit.craftbukkit.v1_4_5.CraftChunkSnapshot;
+import org.bukkit.craftbukkit.v1_4_5.CraftWorld;
 import org.bukkit.ChunkSnapshot;
 import org.dynmap.DynmapChunk;
 import org.dynmap.DynmapCore;
@@ -762,7 +762,7 @@ public class NewMapChunkCache implements MapChunkCache {
                 unloadqueue = ChunkProviderServer.class.getField("unloadQueue");
                 Class cls = unloadqueue.getType();
                 String nm = cls.getName();
-                if (nm.equals("org.bukkit.craftbukkit.util.LongHashset")) {
+                if (nm.equals("org.bukkit.craftbukkit.v1_4_5.util.LongHashset")) {
                     queuecontainskey = unloadqueue.getType().getMethod("containsKey", new Class[] { int.class, int.class });
                 }
                 else {

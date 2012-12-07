@@ -16,7 +16,7 @@ import java.util.concurrent.Callable;
 import java.util.concurrent.CancellationException;
 import java.util.concurrent.Future;
 
-import net.minecraft.server.BiomeBase;
+import net.minecraft.server.v1_4_5.BiomeBase;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Chunk;
